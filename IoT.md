@@ -63,7 +63,7 @@
 
 [![tron](http://www.um.u-tokyo.ac.jp/publish_db/2000dm2k/japanese/01/images/10-01.gif)](http://www.um.u-tokyo.ac.jp/publish_db/2000dm2k/japanese/01/01-10.html)
 
-> "TRONプロジェクト － 坂村 健 －", http://www.um.u-tokyo.ac.jp/publish_db/2000dm2k/japanese/01/01-10.htmlより
+> "TRONプロジェクト － 坂村 健 －", http://www.um.u-tokyo.ac.jp/publish_db/2000dm2k/japanese/01/01-10.html
 
 IoTというコンセプトは新しいものではありません。例えば、TRONというOSで著名な研究者 坂村健さんは、1980年代にすでに「どこでもコンピュータ」というIoTに通じるコンセプトを打ち出していました。しかし、当時はまだコンピュータが高価だったこともあり、坂村さんが描いた「どこでもコンピュータ」が普及することはありませんでした。これまで見てきたような背景があってようやく「どこでもコンピュータ」は名前と変えて、IoTとして実現されるようになってきたのです。
 
