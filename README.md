@@ -1,5 +1,7 @@
 # Enjoy-IoT
 
+[YAUC 2016 Summer](https://yauc2016summer.github.io/)用のテキスト
+
 * [IoT](IoT.md)
 * [Arduino](arduino.md)
 * [FaBo](fabo.md)
