@@ -4,15 +4,15 @@
 
 FaBo(ファボ)は、FaBo,Incが開発しているツールで、LEDやセンサーとマイコンボードを簡単につなぐことができます。
 
-![FaBo02](img/fabo02.jpg)
+![FaBo02](img/fabo02.png)
 
 **FaBoシールドを装着したArduino**
 
-![FaBo03](img/fabo03.jpg)
+![FaBo03](img/fabo03.png)
 
 FaBoが提供するシールドを、ArduinoやRaspberry PIなどのマイコンボードに装着する。これだけで、LEDライトやボタン、加速度センサなどのパーツを簡単に利用できるのです。
 
-![FaBo04](img/fabo04.jpg)
+![FaBo04](img/fabo04.png)
 
 FaBoは、豊富なパーツを取り揃えています。温度センサ、感圧センサ、紫外線センサ、ブザー、７セグメントLED、可変抵抗…など。FaBoを使えば、早く、簡単に、これらのパーツを試すことが可能になります。
 
