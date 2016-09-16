@@ -6,13 +6,13 @@
 
 Arduinoは、誰でも気軽にIoTをはじめられるマイコンボードです。アルドゥイーノと読みます。Arduinoにはたくさんの種類があり、もっとも広く使われているArduino UnoやライターサイズのArduino Nanoがあります。他にもマイコンボードは、Raspberry PI、mbed、Ichigojamなどがあります。他のボードも使いやすいので、Arduinoに慣れてしまえば乗り換えるのも簡単ですよ。
 
-![Raspberry PI](https://ja.wikipedia.org/wiki/Raspberry_Pi#/media/File:Raspberry_Pi_3_Model_B.png)
+![Raspberry PI](https://upload.wikimedia.org/wikipedia/commons/b/b4/Raspberry_Pi_3_Model_B.png)
 
 > Raspberry Pi 3 Model B [wikipedia](https://ja.wikipedia.org/wiki/Raspberry_Pi)より
 
-![mbed NXP LPC1768](https://ja.wikipedia.org/wiki/Mbed#/media/File:Mbed_RapidPrototypingBoard_with_NXP_LPC1768(ARM_Cortex-M3)_MCU.jpg)
+![mbed NXP LPC1768](https://ja.wikipedia.org/wiki/Mbed)
 
-> mbed NXP LPC1768 [wikipedia](https://ja.wikipedia.org/wiki/Mbed#/media/File:Mbed_RapidPrototypingBoard_with_NXP_LPC1768(ARM_Cortex-M3)_MCU.jpg)より
+> mbed NXP LPC1768 [wikipedia]()より
 
 今回は、Arduino Uno(アルドゥイーノ・ウノ)を使っていきたいと思います。
 
