@@ -71,7 +71,7 @@ void loop() {
 }
 ```
 
-![led animation](img/led-animation.gif)
+![led](img/arduino-led-01.png)
 
 ビルドとプログラムの転送を行います。1秒おきにLEDが点滅していますね。これがはじめの一歩です。
 
@@ -83,6 +83,6 @@ void loop() {
 
 さっき使ったプログラムをArduinoに転送します。
 
-![led animation 2](img/led-animation2.gif)
+![led2](img/arduino-led-02.png)
 
 実際にLEDが点滅しました。比べてみると、FaBoを使うと簡単にLチカができることが分かりますね。
