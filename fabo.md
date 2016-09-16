@@ -75,7 +75,16 @@ void loop() {
 
 ビルドとプログラムの転送を行います。1秒おきにLEDが点滅していれば、成功です。
 
-おめでとうございます。これがIoTのはじめの一歩です。ロボットを使ってみたり、便利のデバイスを作ってみたり、楽しい世界があなたを待っていますよ。
+おめでとうございます。これがIoTのはじめの一歩です。FaBoにはボタンや温度センサなど、ワクワクするようなパーツが他にもあります。下のサイトを参考に別のパーツも試してみましょう。
+
+* FaBo Starter Kit for Arduino 導入マニュアル
+    * http://docs.fabo.io/fabo/starter/arduino/
+* FaBo STEM Kit for Arduino 導入マニュアル
+    * http://docs.fabo.io/fabo/stem/arduino/
+* FaBo Arduino
+    * https://fabo.gitbooks.io/faboandroiddocs/content/
+* パーツごとのサンプルコード集
+    * http://www.fabo.io/brick.html
 
 ## FaBoを使わない場合
 
