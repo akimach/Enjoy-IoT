@@ -1,10 +1,20 @@
 # Arduino
 
-Arduinoは、誰でもカンタンにIoTをはじめられるマイコンボードです。アルドゥイーノと読みます。Arduinoにはたくさんの種類があり、もっとも広く使われているArduino UnoやライターサイズのArduino Nanoがあります。今回は、Arduino Uno(アルドゥイーノ・ウノ)を使っていきたいと思います。
-
 ![arduino](https://upload.wikimedia.org/wikipedia/commons/3/38/Arduino_Uno_-_R3.jpg)
 
 > Arduino UNO [wikipedia](https://en.wikipedia.org/wiki/Arduino)より
+
+Arduinoは、誰でも気軽にIoTをはじめられるマイコンボードです。アルドゥイーノと読みます。Arduinoにはたくさんの種類があり、もっとも広く使われているArduino UnoやライターサイズのArduino Nanoがあります。他にもマイコンボードは、Raspberry PI、mbed、Ichigojamなどがあります。他のボードも使いやすいので、Arduinoに慣れてしまえば乗り換えるのも簡単ですよ。
+
+![Raspberry PI](https://ja.wikipedia.org/wiki/Raspberry_Pi#/media/File:Raspberry_Pi_3_Model_B.png)
+
+> Raspberry Pi 3 Model B [wikipedia](https://ja.wikipedia.org/wiki/Raspberry_Pi)より
+
+![mbed NXP LPC1768](https://ja.wikipedia.org/wiki/Mbed#/media/File:Mbed_RapidPrototypingBoard_with_NXP_LPC1768(ARM_Cortex-M3)_MCU.jpg)
+
+> mbed NXP LPC1768 [wikipedia](https://ja.wikipedia.org/wiki/Mbed#/media/File:Mbed_RapidPrototypingBoard_with_NXP_LPC1768(ARM_Cortex-M3)_MCU.jpg)より
+
+今回は、Arduino Uno(アルドゥイーノ・ウノ)を使っていきたいと思います。
 
 Arduinoを使ってIoTをはじめるうえで、ポイントとなるのは次の2点です。
 
@@ -141,7 +151,7 @@ void loop() {
 
 ## 文法
 
-下のソースコードをビルドして動かしてみましょう。どんなプログラミング言語なのか試してみましょう。
+下のソースコードをビルドして動かしてみましょう。動いたら、数字を変えてみたりしていじってみましょう。
 
 ```ino
 // 1行のコメント
