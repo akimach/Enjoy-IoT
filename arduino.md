@@ -10,9 +10,9 @@ Arduinoは、誰でも気軽にIoTをはじめられるマイコンボードで�
 
 > Raspberry Pi 3 Model B [wikipedia](https://ja.wikipedia.org/wiki/Raspberry_Pi)より
 
-![mbed NXP LPC1768](https://ja.wikipedia.org/wiki/Mbed)
+![mbed NXP LPC1768](https://upload.wikimedia.org/wikipedia/commons/a/af/Mbed_RapidPrototypingBoard_with_NXP_LPC1768%28ARM_Cortex-M3%29_MCU.jpg)
 
-> mbed NXP LPC1768 [wikipedia]()より
+> mbed NXP LPC1768 [wikipedia](https://ja.wikipedia.org/wiki/Mbed)より
 
 今回は、Arduino Uno(アルドゥイーノ・ウノ)を使っていきたいと思います。
 
