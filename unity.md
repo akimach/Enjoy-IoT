@@ -10,7 +10,7 @@ Unityは、初心者からプロまで使えるゲーム開発環境です。一
 
 今回は、簡単なゲームを作りながらUnityについて学んでいきたいと思います。
 
-![unity](img/unity.png)
+![unity](img/unity01.png)
 
 * YouTube
     * https://www.youtube.com/watch?v=abzupULmfjk
