@@ -1,5 +1,20 @@
 # Unity
 
+Unityは、初心者からプロまで使えるゲーム開発環境です。一度作ったゲームは、iOSやAndroid、Windows、Mac OSXといったスマホやパソコンをはじめ、PlayStation、Xbox、WiiUなどのゲーム機上でも動かすことができます。
+
+有名なゲームだと以下のものがUnityを使って作られています。
+
+* ポケモンGO
+* 魔法使いと黒猫のウィズ
+* スマホ版のドラゴンクエスト8
+
+今回は、簡単なゲームを作りながらUnityについて学んでいきたいと思います。
+
+![unity](img/unity.png)
+
+* YouTube
+    * https://www.youtube.com/watch?v=abzupULmfjk
+
 ## インストール方法
 
 ### Windows
