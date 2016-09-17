@@ -101,6 +101,6 @@ IDとパスワードを入力し、「Sign In」をクリックします。
 
 ![unity-osx-21](img/unity-osx-21.png)
 
-登録に完了しました。「Start Using Unity」をクリックします。
+「Start Using Unity」をクリックして、登録の完了です。
 
 ![unity-osx-22](img/unity-osx-22.png)
