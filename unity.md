@@ -99,7 +99,7 @@ Project(プロジェクト)の隣りにある「Console」(コンソール)を�
 
 「ボタンが押された」、「スペースキーが押された」、「キャラクターが衝突した」といった出来事(イベント)が起きたら、何かしたいことがあると思います。画面とユーザの交流が生まれることで、ゲームがより楽しくなりますね。そういったことをやりたい場合は、GameObject(ゲームオブジェクト)と呼ばれる登場人物を作って、イベントとゲームオブジェクトを結びつける必要があります。
 
-![unity msg](img/unity-mgs.png)
+![unity msg](img/unity-msg.png)
 
 まずゲームオブジェクトを作成します。Hierarchy(ヒエラルキー)の部分で右クリックをして、「Create Empty」をクリックします。
 
@@ -161,7 +161,7 @@ public class NewBehaviourScript : MonoBehaviour {
 	
 	}
 
-	// こんいちは、と出力します
+	// こんにちは、と出力します
 	public void Hello ()
 	{
 		print("こんにちは");
@@ -182,6 +182,115 @@ public class NewBehaviourScript : MonoBehaviour {
 シーンの部分にある「GameObject」を、インスペクター部分にある「None」にドラッグ・アンド・ドロップします。
 
 ![unity 26](img/unity-26.png)
+
+別の方法では、インスペクター部分にある「None」をクリックして、表示される画面の「Game Object」をクリックする方法もあります。
+
+![unity 27](img/unity-27.png)
+
+次に呼び出す関数を指定します。「On Click()」にある「No Function」 > 「NewBehaviourScript」 > 「Hello()」をクリックします。
+
+![unity 28](img/unity-28.png)
+
+さて、これで完了です。ゲームを動かしてみましょう。ボタンをクリックすると、コンソール部分に「こんにちは」と表示されました。
+
+![unity 29](img/unity-29.png)
+
+次のステップに行く前に、シーンの保存をしましょう。上のほうにある「File」 > 「Save Scene」をクリックします。
+
+![unity 31](img/unity-31.png)
+
+下のような画面が表示されるので、「Start.unity」という名前でシーンを保存します。
+
+![unity 31](img/unity-32.png)
+
+## 画面遷移
+
+それではゲームの骨組みを作っていきます。下のような感じで画面を作ります。
+
+![unity 30](img/unity-30.png)
+
+### シーンの作り方
+
+シーン(画面)の作り方をみていきます。プロジェクトの部分で右クリックして、「Create」 > 「Scene」をクリックします。
+
+![unity 33](img/unity-33.png)
+
+シーンの名前を「Stage」としましょう。
+
+![unity 34](img/unity-34.png)
+
+さて、スタート画面からステージ画面に移るようにしてみましょう。
+
+プロジェクト部分にある「NewBehaviourScript」スクリプトをダブルクリックします。起動したエディタを使って、スクリプトに次のようなソースコードを追加します。
+
+```cs
+using UnityEngine;
+using System.Collections;
+using UnityEngine.SceneManagement;
+
+public class NewBehaviourScript : MonoBehaviour {
+
+	// Use this for initialization
+	void Start () {
+	
+	}
+	
+	// Update is called once per frame
+	void Update () {
+	
+	}
+
+	// こんいちは、と出力します
+	public void Hello ()
+	{
+		print("こんにちは");
+	}
+
+	// 別の画面に移ります
+	public void JumpScene (string scene)
+	{
+		SceneManager.LoadScene(scene);
+	}
+}
+```
+
+追加した`JumpScene()`関数は引数として受け取った名前(`string scene`の部分ですね)の画面(シーン)に移ります。`scene`に遷移する画面名を教えてあげることで遷移します。
+
+Unityに戻ってボタンの「On Click()」部分の「NewBehaviourScript.Hello()」を「JumpScene」に変更します。
+
+![unity 35](img/unity-35.png)
+
+すると入力部分ができているので、そこに「stage」と入力しましょう。この部分が`JumpScene (string scene)`の引数に相当します。
+
+![unity 36](img/unity-36.png)
+
+さて、ゲームを実行してみましょう。しかし、うまくいきません。エラーが出ているようです。
+
+![unity 37](img/unity-37.png)
+
+各画面(シーン)は別々に独立しているので、お互いに画面があることを教えてあげる必要があります。
+
+上の方にある「File」 > 「Build Settings」をクリックします。
+
+![unity 38](img/unity-38.png)
+
+使用するシーンを「Scens In Build」の部分にドラッグ&ドロップします。このときに注意することがあります。先にくるシーンを上のほうにくるようにしなければいけません。「Start」、「Stage」の順になるようにしましょう。
+
+![unity 39](img/unity-39.png)
+
+「Build」をクリックします。
+
+![unity 40](img/unity-40.png)
+
+次にような画面が表示されますので、適当な名前を入力して「Save」をクリックします。
+
+![unity 41](img/unity-41.png)
+
+ゲームを実行してみましょう。スタート画面のボタンをクリックすると、何もない画面に移りました。
+
+![unity 42](img/unity-42.png)
+
+
 
 ## インストール方法
 
