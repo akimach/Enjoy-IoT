@@ -141,7 +141,7 @@ Windowsの場合、Visual Stdioというエディタが起動します。
 
 プログラミングをやる前に、スクリプトの仕組みをみてみましょう。Arduinoのソースコードと似ていないでしょうか。`Start()`と`Update()`という関数があります。最初に一度だけ実行される`Start()`関数、繰り返し実行される`Update()`関数があります。ちなみに、`Start()`と前に`Awake()`という関数が呼び出されています。
 
-![unity script](img/unity-script.png)
+![unity script](img/unity-script-system.png)
 
 実際にコードを書いてみましょう。
 
