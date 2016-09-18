@@ -1,5 +1,7 @@
 # Enjoy-IoT
 
+IoTを楽しもう！
+
 ![yauc](img/2016summer_original.jpg)
 
 [YAUC 2016 Summer](https://yauc2016summer.github.io/)用のテキストです。対象は中学生〜高校生を想定して作りました。
