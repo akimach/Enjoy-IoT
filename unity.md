@@ -328,7 +328,236 @@ Stageシーンの「Main Camera」をダブルクリックします。すると�
 
 ![unity 49](img/unity-49.png)
 
+ブロックをコピー&ペーストして、ブロックを増やしてみましょう。
 
+![unity 50](img/unity-50.png)
+
+![unity 51](img/unity-51.png)
+
+上のほうにある十字矢印のボタンをクリックして、ブロックを移動します。
+
+![unity 52](img/unity-52.png)
+
+ブロックを動かないように固定します。ブロックを選択して、「Add Component」 > 「Physics 2D」 > 「Box Collider 2D」をクリックします。
+
+![unity 53](img/unity-53.png)
+
+ロボットを選択して、「Physics 2D」 > 「Box Collider 2D」をクリックします。
+
+![unity 55](img/unity-55.png)
+
+ゲームを実行してみましょう。ブロックの上のロボットが乗りました。
+
+![unity 54](img/unity-54.png)
+
+## ロボットをジャンプさせる
+
+今度は、ロボットをジャンプさせてみましょう。
+
+「robot」を選択して、「Add Component」 > 「New Script」をクリックして、「Robot」という名前でスクリプトを作成します。
+
+![unity 56](img/unity-56.png)
+
+「Robot」スクリプトをダブルクリックして、エディタを起動します。以下のコードを追加します。スペースを押したら、ジャンプするようになります。
+
+```cs
+using UnityEngine;
+using System.Collections;
+
+public class Robot : MonoBehaviour {
+
+	// Use this for initialization
+	void Start () {
+	
+	}
+	
+	// Update is called once per frame
+	void Update ()
+	{
+		// スペースを押したら、ジャンプしる
+		// 上方向に初速度10
+		if (Input.GetKeyDown(KeyCode.Space)) {
+			this.GetComponent<Rigidbody2D>().velocity = new Vector2(0.0f, 10.0f);
+		}
+	}
+}
+```
+
+![unity 57](img/unity-57.png)
+
+しかし、これではジャンプ中でもジャンプすることが可能です。そこで、「ブロックについている間だけ、ジャンプできる」ようにします。
+
+「ロボットとブロックについている」 = 「ロボットとブロックが衝突している」なので、衝突についてみてみましょう。
+
+関数の`void OnCollisionEnter2D (Collision2D collision)`を追加することで、衝突したかどうかを知ることができます。
+
+```cs
+using UnityEngine;
+using System.Collections;
+
+public class Robot : MonoBehaviour {
+
+	bool isGround = false;
+	
+	// Use this for initialization
+	void Start () { }
+
+	// Update is called once per frame
+	void Update () {
+		if (Input.GetKeyDown(KeyCode.Space) && isGround) {
+			isGround = false;
+			this.GetComponent<Rigidbody2D>().velocity = new Vector2(0.0f, 10.0f);
+		}
+	}
+
+	// 物体が衝突した時に 呼び出されます
+	void OnCollisionEnter2D (Collision2D collision) {
+		print("衝突しました");
+		isGround = true;
+	}
+}
+```
+
+ゲームを実行してみましょう。ブロックに触れていないとジャンプができないようになりました。
+
+![unity 58](img/unity-58.png)
+
+### 落下したらゲームオーバーにする
+
+次に落下したらゲームオーバーの画面に移るようにしましょう。落下したことをどうやったら知ることができるでしょうか。
+
+今回は、画面外の下に仮想的なブロックを用意してそれに衝突したらゲームオーバーの画面に遷移します。
+
+まずHierarchy(ヒエラルキー)の部分で右クリックして、「Create Empty」をクリックします。
+
+![unity 60](img/unity-60.png)
+
+名前を「GameOverArea」として、「Add Component」 > 「Physics 2D」 > 「Box Collider 2D」をクリックします。
+
+![unity 59](img/unity-59.png)
+
+画面下いっぱいにブロックが来るように調節します。
+
+![unity 61](img/unity-61.png)
+
+「GameOverArea」にスクリプトを追加します。「Add Component」 > 「New Script」をクリックして、「GameOverArea」というスクリプトを追加します。
+
+![unity 62](img/unity-62.png)
+
+「GameOverArea」エディタをダブルクリックして、エディタを起動させます。下のようなソースコードを追加します。
+
+```cs
+using UnityEngine;
+using System.Collections;
+using UnityEngine.SceneManagement;
+
+public class GameOverArea : MonoBehaviour {
+
+	// 物体が衝突した時に 呼び出されます
+	void OnCollisionEnter2D (Collision2D collision) {
+		print("ゲームオーバーです");
+
+		// ゲームオーバー画面に移ります
+		SceneManager.LoadScene("GameOver");
+	}
+}
+```
+
+ロボットの初期位置をずらして、画面外に落としてみましょう。ゲームオーバー画面に移りましたか？
+
+![unity 63](img/unity-63.png)
+
+### 床の移動
+
+床をたくさん並べて、横に移動させてみます。するとどうでしょうか。ロボットを移動しているように見えます。
+
+まずは１つの床を移動させてみましょう。ブロックを選択して、「Add Component」 > 「New Script」をクリックして、「Ground」というスクリプトを追加します。
+
+![unity 63](img/unity-63.png)
+
+「Ground」スクリプトをダブルクリックして、エディタを起動させます。下のようなコードを追加します。
+
+```cs
+using UnityEngine;
+using System.Collections;
+
+public class Ground : MonoBehaviour {
+
+	// 移動速度
+	public float speed = 0.15f;
+	// 初期位置
+	public float xPosition = 0.0f;
+
+	// Use this for initialization
+	void Start () {
+		// ブロックの初期位置を記憶します
+		xPosition = this.transform.position.x;
+	}
+	
+	// Update is called once per frame
+	void Update () {
+		// 毎回左に移動していきます
+		Vector3 pos = new Vector3(0.5f, this.transform.position.y, 0);
+		xPosition -= speed;
+		pos.x = xPosition;
+		this.transform.position = pos;
+	}
+}
+```
+
+実行するとブロックが移動していることが分かりますね。ブロックを選択して、インスペクターを見ると「Speed」を見るという項目が追加されました。ここから、ブロックの移動速度を調節することができます。
+
+![unity 66](img/unity-66.png)
+
+ブロックをコピペして増やします。
+
+![unity 67](img/unity-67.png)
+
+実行してみましょう。ロボットが移動しているように見えますね。
+
+次にゴールを作ってみましょう。ゴール用のブロックに触れたら、ゲームクリア画面に遷移します。
+
+まず、金色のブロックをシーンにドラッグ&ドロップしたあと、ブロックの位置を調整します。
+
+![unity 68](img/unity-68.png)
+
+ゴール用のブロックを選択して、「Add Component」 > 「Physics 2D」 > 「Box Collider 2D」をクリックします。次に「Add Component」 > 「New Script」をクリックして、「GoalGround」というスクリプトを追加します。エディタ上で「GoalGround」スクリプトに、次のソースコードを追加します。
+
+```cs
+using UnityEngine;
+using System.Collections;
+using UnityEngine.SceneManagement;
+
+public class GoalGround : MonoBehaviour {
+
+	// 移動速度
+	public float speed = 0.15f;
+	// 初期位置
+	public float xPosition = 0.0f;
+
+	// Use this for initialization
+	void Start () {
+		// ブロックの初期位置を記憶します
+		xPosition = this.transform.position.x;
+	}
+	
+	// Update is called once per frame
+	void Update () {
+		// 毎回左に移動していきます
+		Vector3 pos = new Vector3(0.5f, this.transform.position.y, 0);
+		xPosition -= speed;
+		pos.x = xPosition;
+		this.transform.position = pos;
+	}
+	
+	void OnCollisionEnter2D (Collision2D collision) {
+		// ステージ終了
+		print("クリア");
+		// ゲームクリア画面に移ります
+		SceneManager.LoadScene("GameClear");
+	}
+}
+```
 
 ## インストール方法
 
