@@ -304,6 +304,30 @@ https://github.com/akimach/Enjoy-IoT/tree/master/materials/images
 
 ![unity 43](img/unity-43.png)
 
+Stageシーンの「Main Camera」をダブルクリックします。すると、シーン部分の中央にカメラがくるようになります。
+
+![unity 44](img/unity-44.png)
+
+シーン部分にロボットの画像をドラッグ&ドロップしましょう。サイズや位置を調節しましょう。
+
+![unity 45](img/unity-45.png)
+
+ロボットの画像を選択して、右側のインスペクター部分の「Add Component」をクリックします。そこから、「Physics 2D」 > 「Rigidbody 2D」をクリックします。
+
+![unity 46](img/unity-46.png)
+
+ゲームを実行してみましょう。ロボットが落っこちました。
+
+![unity 47](img/unity-47.png)
+
+インスペクターから質量などの調整ができるので、いろいろと試してみましょう。
+
+![unity 48](img/unity-48.png)
+
+ロボットが落っこちないように床を作ってみましょう。グレーのブロック画像をシーンにドラッグ&ドロップします。ロボットが落ちるそうなところに画像を移動させます。
+
+![unity 49](img/unity-49.png)
+
 
 
 ## インストール方法
