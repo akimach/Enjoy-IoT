@@ -290,6 +290,20 @@ Unityに戻ってボタンの「On Click()」部分の「NewBehaviourScript.Hell
 
 ![unity 42](img/unity-42.png)
 
+課題です。画面遷移が以下の図になるようにしてみましょう。
+
+![unity 30](img/unity-30.png)
+
+## キャラクターを動かす
+
+まず以下のリンクにある画像をダウンロードしましょう。
+
+https://github.com/akimach/Enjoy-IoT/tree/master/materials/images
+
+プロジェクトの部分に、画像をドラッグ&ドロップします。
+
+![unity 43](img/unity-43.png)
+
 
 
 ## インストール方法
