@@ -10,10 +10,12 @@ IoTを楽しもう！
     * IoT(Internet Of Things)とは何か、なんでブームになっているのか
 * [Arduino](arduino.md)
     * Arduinoとは何か、Arduinoを使ったプログラミングの方法
+    * [インストール方法](install-arduino.md)
 * [FaBo](fabo.md)
     * FaBoとは何か、FaBoの使い方
 * [Unity](unity.md)
     * Unityとは何か、Unityを使ったゲームづくりの方法
+    * [インストール方法](install-unity.md)
 
 ---
 

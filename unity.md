@@ -15,6 +15,10 @@ Unityは、初心者からプロまで使えるゲーム開発環境です。一
 * YouTube
     * https://www.youtube.com/watch?v=abzupULmfjk
 
+## Unityのインストール方法
+
+[こちら](/install-unity.md)を参考にしてください。
+
 ## Unityでゲームを作る方法
 
 Unityには、画像やBGM、効果音、テキストなどを簡単に扱うための仕組みが備わっています。
@@ -568,7 +572,3 @@ public class GoalGround : MonoBehaviour {
 ![unity 70](img/unity-70.png)
 
 お疲れ様でした。これでゲームの骨組みが完成しました。次のステップとして、BGMや効果音を付けて、ゲームをお化粧させてみましょう。
-
-## インストール方法
-
-[こちら](/install-unity.md)を参考にしてください。
